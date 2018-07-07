@@ -1,0 +1,28 @@
+type: "MARKDOWN_NOTE"
+folder: "c37014ad0c3118562559"
+title: "linux命令"
+content: '''
+  # linux命令
+  ----
+  
+  > ## `iptraf-ng` 查看网卡流量信息
+  `ptraf`改名为`iptraf-ng`
+  
+  ---
+  > ## `apt-get` 软件管理
+  
+  ---
+  > ## `man` 手册
+  手册分多页，默认1
+  1   可执行程序或 shell 命令
+  2   系统调用(内核提供的函数)
+  3   库调用(程序库中的函数)
+  ...
+  
+  
+'''
+tags: []
+isStarred: false
+isTrashed: false
+createdAt: "2018-06-17T08:13:19.744Z"
+updatedAt: "2018-06-17T10:45:50.767Z"

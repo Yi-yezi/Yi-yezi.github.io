@@ -1,0 +1,25 @@
+type: "MARKDOWN_NOTE"
+folder: "c37014ad0c3118562559"
+title: "vim"
+content: '''
+  # vim
+  ---
+  
+  ## 常用键位
+  > ### 移动
+  `h j k l` 左下右上
+  `G` 跳文尾 `gg` 跳文首
+  `0` 跳行首 `$` 跳行尾
+  
+  > ### 撤销
+  `u` 撤销     `ctrl+r` 反撤销
+  
+  > ### 复制
+  `yy` 复制一行 `ym` 复制一个字 `y` 复制光标后所有
+  
+'''
+tags: []
+isStarred: false
+isTrashed: false
+createdAt: "2018-06-17T07:11:27.254Z"
+updatedAt: "2018-06-17T08:25:24.633Z"
