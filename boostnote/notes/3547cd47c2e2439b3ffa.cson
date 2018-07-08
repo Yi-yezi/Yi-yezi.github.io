@@ -19,10 +19,19 @@ content: '''
   3   库调用(程序库中的函数)
   ...
   
+  > ## `ln` 创建链接
+  `ln A B`创建硬连接，原先A->inode,现在A,B->inode
+  `ln -s A B`创建软链接，原先A->inode，现在B->A->inode
+  系统命令可以创建链接放入`/usr/local/bin`
+  
+  **硬链接与软链接**
+  硬链接等于创建了一个指针直接指向源链接所指的内存，如果删除源链接，但那块内存还在，因为还有硬链接指向
+  软链接等于间接，类比快捷方式
+  
   
 '''
 tags: []
 isStarred: false
 isTrashed: false
 createdAt: "2018-06-17T08:13:19.744Z"
-updatedAt: "2018-06-17T10:45:50.767Z"
+updatedAt: "2018-07-08T08:02:44.322Z"
