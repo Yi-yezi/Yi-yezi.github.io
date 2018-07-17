@@ -2,7 +2,7 @@
 home: true
 #heroImage: /hero.png
 actionText: 浏览 →
-actionLink: /PROGRAM_LANG/
+actionLink: /others/
 
 footer: Yi-yezi
 ---
