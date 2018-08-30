@@ -1,0 +1,38 @@
+createdAt: "2018-08-30T13:38:01.025Z"
+updatedAt: "2018-08-30T13:38:52.863Z"
+type: "MARKDOWN_NOTE"
+folder: "75622371f11bbc731362"
+title: "B1016"
+content: '''
+  # B1016
+  ```C++
+  #define _CRT_SECURE_NO_WARNINGS
+  #include<cstdio>
+  using namespace std;
+  
+  const int maxn = 100010;
+  
+  int main()
+  {
+  	long long A, DA, B,DB,PA=0,PB=0;
+  	scanf("%lld %lld %lld %lld", &A, &DA, &B,&DB);
+  	while (A != 0)
+  	{
+  		if (A % 10 == DA)
+  			PA = PA * 10 + DA;
+  		A /= 10;
+  	}
+  	while (B != 0)
+  	{
+  		if (B % 10 == DB)
+  			PB = PB * 10 + DB;
+  		B /= 10;
+  	}
+  	printf("%d", PA + PB);
+  }
+  ```
+  也可以使用字符串（目测速度会更快)
+'''
+tags: []
+isStarred: false
+isTrashed: false
