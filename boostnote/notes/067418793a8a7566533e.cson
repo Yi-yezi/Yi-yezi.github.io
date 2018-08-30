@@ -115,7 +115,7 @@ content: '''
   **为上一次commit补充修改**
   如果commit后发现有部分忘了加想并到上次的commit上，那么可以如下操作
   ```
-  $ git commit -m 'initial commit'
+  $ git commit -m `initial commit`
   $ git add forgotten_file
   $ git commit --amend
   ```
@@ -203,4 +203,4 @@ tags: []
 isStarred: false
 isTrashed: false
 createdAt: "2018-06-26T00:58:54.895Z"
-updatedAt: "2018-07-07T01:40:37.957Z"
+updatedAt: "2018-08-30T11:55:19.558Z"
