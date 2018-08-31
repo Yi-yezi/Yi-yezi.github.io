@@ -21,14 +21,34 @@
       "name": "blog"
     },
     {
-      "key": "278081776040e83da2ab",
-      "color": "#E8D252",
-      "name": "New Folder"
-    },
-    {
       "key": "75622371f11bbc731362",
       "color": "#30D5C8",
-      "name": "PAT"
+      "name": "PAT-入门-简单模拟"
+    },
+    {
+      "key": "3e6a36e6bc70ab6e4419",
+      "color": "#E10051",
+      "name": "PAT-入门-查找元素"
+    },
+    {
+      "key": "00a27f65eb413736f672",
+      "color": "#E8D252",
+      "name": "PAT-入门-图形输出"
+    },
+    {
+      "key": "0eba15cb34a24dc02b35",
+      "color": "#3FD941",
+      "name": "PAT-入门-日期处理"
+    },
+    {
+      "key": "07efa574bd8c487415bc",
+      "color": "#2BA5F7",
+      "name": "PAT-入门-进制转换"
+    },
+    {
+      "key": "f845f61dda1e1958a234",
+      "color": "#30D5C8",
+      "name": "PAT-入门-字符串处理"
     }
   ],
   "version": "1.0"

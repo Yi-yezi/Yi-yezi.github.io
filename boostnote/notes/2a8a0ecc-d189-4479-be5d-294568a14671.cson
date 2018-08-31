@@ -1,5 +1,5 @@
 createdAt: "2018-08-30T13:31:15.026Z"
-updatedAt: "2018-08-31T01:04:22.650Z"
+updatedAt: "2018-08-31T14:42:13.392Z"
 type: "MARKDOWN_NOTE"
 folder: "75622371f11bbc731362"
 title: "B 1011"
@@ -28,6 +28,8 @@ content: '''
   }
   ```
 '''
-tags: []
+tags: [
+  "简单模拟"
+]
 isStarred: false
 isTrashed: false

@@ -1,0 +1,36 @@
+createdAt: "2018-08-31T14:20:05.697Z"
+updatedAt: "2018-08-31T14:39:03.353Z"
+type: "MARKDOWN_NOTE"
+folder: "07efa574bd8c487415bc"
+title: "B 1022"
+content: '''
+  # B 1022
+  ```c++
+  #define _CRT_SECURE_NO_WARNINGS
+  #include<cstdio>
+  #include<math.h>
+  #include<string.h>
+  using namespace std;
+  
+  
+  
+  int main()
+  {
+  	int A, B,C,D,Z[50];
+  	scanf("%d %d %d", &A, &B, &D);
+  	C = A + B;
+  	int num = 0;
+  	do {
+  		Z[num++] = C % D;
+  		C = C / D;
+  	} while (C);
+  	for (int i = num - 1; i >= 0; i--)
+  	{
+  		printf("%d", Z[i]);
+  	}
+  }
+  ```
+'''
+tags: []
+isStarred: false
+isTrashed: false
