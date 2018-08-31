@@ -1,10 +1,10 @@
 createdAt: "2018-08-30T13:22:20.436Z"
-updatedAt: "2018-08-30T13:22:56.675Z"
+updatedAt: "2018-08-31T01:04:24.908Z"
 type: "MARKDOWN_NOTE"
 folder: "75622371f11bbc731362"
-title: "B1032"
+title: "B 1032"
 content: '''
-  # B1032
+  # B 1032
   ```C++
   #define _CRT_SECURE_NO_WARNINGS
   #include<cstdio>

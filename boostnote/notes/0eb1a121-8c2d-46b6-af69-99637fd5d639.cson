@@ -1,10 +1,10 @@
 createdAt: "2018-08-30T13:52:35.699Z"
-updatedAt: "2018-08-30T13:52:48.264Z"
+updatedAt: "2018-08-31T01:04:15.354Z"
 type: "MARKDOWN_NOTE"
 folder: "75622371f11bbc731362"
-title: "1026"
+title: "B 1026"
 content: '''
-  # 1026
+  # B 1026
   ```C++
   #define _CRT_SECURE_NO_WARNINGS
   #include<cstdio>
@@ -17,8 +17,8 @@ content: '''
   {
   	int C1, C2,C;
   	scanf("%d%d", &C1, &C2);
-  	C=(C1-C2)/CLK
-  	printf("%d:%d:%d", C/3600, C%3600/60, C%60);
+  	C = (C2 - C1)%100 >= 50 ? (C2 - C1) / 100 + 1 : (C2 - C1)/100;
+  	printf("%02d:%02d:%02d", C/3600, C%3600/60, C%60);
   }
   ```
 '''
