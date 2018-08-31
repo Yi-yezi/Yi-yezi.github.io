@@ -1,0 +1,41 @@
+createdAt: "2018-08-31T08:29:25.671Z"
+updatedAt: "2018-08-31T08:29:39.339Z"
+type: "MARKDOWN_NOTE"
+folder: "75622371f11bbc731362"
+title: "B 1036"
+content: '''
+  # B 1036
+  ```C++
+  #define _CRT_SECURE_NO_WARNINGS
+  #include<cstdio>
+  #include<math.h>
+  using namespace std;
+  
+  
+  
+  int main() 
+  {
+  	int row, col; //行 列
+  	char c;
+  	scanf("%d %c", &col, &c);
+  	row = col % 2 == 0 ? col / 2 - 2 : (col + 1) / 2 - 2;
+  	for (int i = 0; i < col; i++)
+  		printf("%c", c);
+  	printf("\\n");
+  	for (int i = 0; i < row; i++)
+  	{
+  		printf("%c", c);
+  		for (int j = 0; j < col - 2; j++)
+  		{
+  			printf(" ");
+  		}
+  		printf("%c\\n", c);
+  	}
+  	for (int i = 0; i < col; i++)
+  		printf("%c", c);
+  }
+  ```
+'''
+tags: []
+isStarred: false
+isTrashed: false

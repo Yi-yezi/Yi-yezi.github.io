@@ -1,0 +1,43 @@
+createdAt: "2018-08-31T01:21:45.610Z"
+updatedAt: "2018-08-31T01:22:06.087Z"
+type: "MARKDOWN_NOTE"
+folder: "75622371f11bbc731362"
+title: "B 1008"
+content: '''
+  # B 1008
+  ```C++
+  #define _CRT_SECURE_NO_WARNINGS
+  #include<cstdio>
+  #include<math.h>
+  using namespace std;
+  
+  int main()
+  {
+  	int N, M;
+  	scanf("%d%d", &N, &M);
+  	int a[110],count=0;
+  	for (int i = 0; i < N; i++)
+  	{
+  		scanf("%d", &a[i]);
+  	}
+  	M = M % N;
+  	for (int i = N - M; i <= N - 1; i++)
+  	{
+  		printf("%d", a[i]);
+  		count++;
+  		if (count < N)
+  			printf(" ");
+  	}
+  	for (int i = 0; i <= N - M - 1; i++)
+  	{
+  		printf("%d", a[i]);
+  		count++;
+  		if (count < N)
+  			printf(" ");
+  	}
+  }
+  ```
+'''
+tags: []
+isStarred: false
+isTrashed: false

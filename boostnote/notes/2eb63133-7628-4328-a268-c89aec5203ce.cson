@@ -1,0 +1,34 @@
+createdAt: "2018-08-31T01:03:55.200Z"
+updatedAt: "2018-08-31T01:05:07.816Z"
+type: "MARKDOWN_NOTE"
+folder: "75622371f11bbc731362"
+title: "B 1046"
+content: '''
+  # B 1046
+  ```C++
+  #define _CRT_SECURE_NO_WARNINGS
+  #include<cstdio>
+  #include<math.h>
+  using namespace std;
+  
+  int main()
+  {
+  	int N;
+  	scanf("%d", &N);
+  	int A, AD, B, BD,C,AS=0,BS=0;
+  	for (int i = 0; i < N; i++)
+  	{
+  		scanf("%d%d%d%d", &A, &AD, &B, &BD);
+  		C = A + B;
+  		if (C == AD && C != BD)
+  			BS++;
+  		else if (C != AD && C == BD)
+  			AS++;
+  	}
+  	printf("%d %d\\n", AS, BS);
+  }
+  ```
+'''
+tags: []
+isStarred: false
+isTrashed: false

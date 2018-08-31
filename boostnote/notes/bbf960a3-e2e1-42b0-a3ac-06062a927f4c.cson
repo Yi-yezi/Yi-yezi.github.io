@@ -1,0 +1,76 @@
+createdAt: "2018-08-31T01:47:40.864Z"
+updatedAt: "2018-08-31T01:47:55.480Z"
+type: "MARKDOWN_NOTE"
+folder: "75622371f11bbc731362"
+title: "B 1012"
+content: '''
+  # B 1012
+  ```C++
+  #define _CRT_SECURE_NO_WARNINGS
+  #include<cstdio>
+  #include<math.h>
+  using namespace std;
+  
+  int main()
+  {
+  	int N;
+  	scanf("%d", &N);
+  	int A[5] = { 0 }, count[5] = { 0 };
+  	int temp;
+  	for (int i = 0; i < N; i++)
+  	{
+  		scanf("%d", &temp);
+  		if (temp % 5 == 0 && temp % 2 == 0)
+  		{
+  			A[0] += temp;
+  			count[0]++;
+  		}
+  		else if (temp % 5 == 1)
+  		{
+  			A[1] = count[1] % 2 == 0 ? A[1] + temp : A[1] - temp;
+  			count[1]++;
+  		}
+  		else if (temp % 5 == 2)
+  		{
+  			A[2]++;
+  			count[2]++;
+  		}
+  		else if (temp % 5 == 3)
+  		{
+  			A[3]+=temp;
+  			count[3]++;
+  		}
+  		else if (temp % 5 == 4)
+  		{
+  			if (temp > A[4])
+  				A[4] = temp;
+  			count[4]++;
+  		}
+  	}
+  	if (count[0] == 0)
+  		printf("N ");
+  	else
+  		printf("%d ", A[0]);
+  	if (count[1] == 0)
+  		printf("N ");
+  	else
+  		printf("%d ", A[1]);
+  	if (count[2] == 0)
+  		printf("N ");
+  	else
+  		printf("%d ", A[2]);
+  	if (count[3] == 0)
+  		printf("N ");
+  	else
+  		printf("%.1f ", (float)A[3]/count[3]);
+  	if (count[4] == 0)
+  		printf("N");
+  	else
+  		printf("%d", A[4]);
+  
+  }
+  ```
+'''
+tags: []
+isStarred: false
+isTrashed: false

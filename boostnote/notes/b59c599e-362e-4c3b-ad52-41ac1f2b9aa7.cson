@@ -1,0 +1,52 @@
+createdAt: "2018-08-31T07:55:08.651Z"
+updatedAt: "2018-08-31T07:55:23.709Z"
+type: "MARKDOWN_NOTE"
+folder: "75622371f11bbc731362"
+title: "A 1006"
+content: '''
+  # A 1006
+  ```C++
+  #define _CRT_SECURE_NO_WARNINGS
+  #include<cstdio>
+  #include<math.h>
+  using namespace std;
+  
+  struct time {
+  	int hour, minute, second;
+  };
+  
+  struct student {
+  	char id[16];
+  	time in_time;
+  	time out_time;
+  }first,last,temp;
+  
+  int main() 
+  {
+  	int N;
+  	scanf("%d", &N);
+  	first.in_time.hour = 24;
+  	first.in_time.minute = 0;
+  	first.in_time.second = 0;
+  	last.out_time.hour = 0;
+  	last.out_time.minute = 0;
+  	last.out_time.second = 0;
+  	
+  	for (int i = 0; i < N; i++)
+  	{
+  		scanf("%s %d:%d:%d %d:%d:%d", &temp.id, &temp.in_time.hour, &temp.in_time.minute, &temp.in_time.second,
+  			&temp.out_time.hour, &temp.out_time.minute, &temp.out_time.second);
+  		if (temp.in_time.hour * 3600 + temp.in_time.minute * 60 + temp.in_time.second <
+  			first.in_time.hour * 3600 + first.in_time.minute * 60 + first.in_time.second)
+  			first = temp;
+  		if (temp.out_time.hour * 3600 + temp.out_time.minute * 60 + temp.out_time.second >
+  			last.out_time.hour * 3600 + last.out_time.minute * 60 + last.out_time.second)
+  			last = temp;
+  	}
+  	printf("%s %s", first.id, last.id);
+  }
+  ```
+'''
+tags: []
+isStarred: false
+isTrashed: false

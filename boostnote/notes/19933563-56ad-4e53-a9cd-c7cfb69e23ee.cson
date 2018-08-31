@@ -1,0 +1,46 @@
+createdAt: "2018-08-31T03:39:09.997Z"
+updatedAt: "2018-08-31T03:39:18.845Z"
+type: "MARKDOWN_NOTE"
+folder: "75622371f11bbc731362"
+title: "A 1046"
+content: '''
+  # A 1046
+  ```C++
+  #define _CRT_SECURE_NO_WARNINGS
+  #include<cstdio>
+  #include<math.h>
+  using namespace std;
+  
+  int main()
+  {
+  	int N;
+  	scanf("%d", &N);
+  	int distance[100010],sum_distance[100010], total_distance=0;
+  	distance[0] = 0, sum_distance[0] = 0;
+  	for (int i = 1; i <= N; i++)
+  	{
+  		scanf("%d", &distance[i]);
+  		total_distance += distance[i];
+  		sum_distance[i] = total_distance;
+  	}
+  	int M;
+  	int positive_distance;
+  	int negative_distance;
+  	scanf("%d", &M);
+  	for (int i = 0; i < M;i++)
+  	{
+  		int d1, d2;
+  		scanf("%d%d", &d1, &d2);
+  		if (d1 < d2)
+  			positive_distance = sum_distance[d2 - 1] - sum_distance[d1 - 1];
+  		else
+  			positive_distance = sum_distance[d1 - 1] - sum_distance[d2 - 1];
+  		negative_distance = total_distance - positive_distance;
+  		printf("%d\\n", positive_distance < negative_distance ? positive_distance : negative_distance);
+  	}
+  }
+  ```
+'''
+tags: []
+isStarred: false
+isTrashed: false

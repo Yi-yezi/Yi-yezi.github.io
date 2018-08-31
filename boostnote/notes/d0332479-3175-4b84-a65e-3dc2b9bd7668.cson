@@ -1,0 +1,45 @@
+createdAt: "2018-08-31T06:43:50.803Z"
+updatedAt: "2018-08-31T06:44:01.596Z"
+type: "MARKDOWN_NOTE"
+folder: "75622371f11bbc731362"
+title: "B 1041"
+content: '''
+  # B 1041
+  ```C++
+  #define _CRT_SECURE_NO_WARNINGS
+  #include<cstdio>
+  #include<math.h>
+  using namespace std;
+  
+  struct student {
+  	long long id;
+  	int examSeat;
+  };
+  
+  int main()
+  {
+  	int N;
+  	scanf("%d", &N);
+  	student a[1005];
+  	long long id;
+  	int seat;
+  	for (int i = 0; i < N; i++)
+  	{
+  		scanf("%lld",&id);
+  		scanf("%d", &seat);
+  		a[seat].id = id;
+  		scanf("%d", &a[seat].examSeat);
+  	}
+  	int M;
+  	scanf("%d", &M);
+  	for (int i=0; i < M; i++)
+  	{
+  		scanf("%d", &seat);
+  		printf("%lld %d\\n", a[seat].id, a[seat].examSeat);
+  	}
+  }
+  ```
+'''
+tags: []
+isStarred: false
+isTrashed: false
