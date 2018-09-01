@@ -1,0 +1,80 @@
+createdAt: "2018-09-01T06:33:42.905Z"
+updatedAt: "2018-09-01T06:33:57.437Z"
+type: "MARKDOWN_NOTE"
+folder: "f845f61dda1e1958a234"
+title: "A 1035"
+content: '''
+  # A 1035
+  ```C++
+  #define _CRT_SECURE_NO_WARNINGS
+  #include<cstdio>
+  #include<math.h>
+  #include<string.h>
+  using namespace std;
+  
+  struct account
+  {
+  	char name[15];
+  	char password[15];
+  }accounts, all[1010];
+  
+  int main()
+  {
+  	int n;
+  	scanf("%d", &n);
+  	int modified_num = 0;
+  	for (int i = 0; i < n; i++)
+  	{
+  		scanf("%s %s", accounts.name, accounts.password);
+  		int len = strlen(accounts.password);
+  		bool modified = false;
+  		for (int j = 0; j < len; j++)
+  		{
+  			if (accounts.password[j] == '1')
+  			{
+  				accounts.password[j] = '@';
+  				modified = true;
+  			}
+  			else if (accounts.password[j] == '0')
+  			{
+  				accounts.password[j] = '%';
+  				modified = true;
+  			}
+  			else if (accounts.password[j] == 'l')
+  			{
+  				accounts.password[j] = 'L';
+  				modified = true;
+  			}
+  			else if (accounts.password[j] == 'O')
+  			{
+  				accounts.password[j] = 'o';
+  				modified = true;
+  			}
+  		}
+  		if (modified)
+  		{
+  			all[modified_num++] = accounts;
+  		}
+  	}
+  	if (modified_num > 0)
+  	{
+  		printf("%d\\n", modified_num);
+  		for (int i = 0; i < modified_num; i++)
+  		{
+  			printf("%s %s\\n", all[i].name, all[i].password);
+  		}
+  	}
+  	else if(n==1)
+  	{
+  		printf("There is 1 account and no account is modified");
+  	}
+  	else
+  	{
+  		printf("There are %d accounts and no account is modified", n);
+  	}
+  }
+  ```
+'''
+tags: []
+isStarred: false
+isTrashed: false

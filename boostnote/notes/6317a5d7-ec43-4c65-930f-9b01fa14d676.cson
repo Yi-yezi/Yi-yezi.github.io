@@ -1,0 +1,43 @@
+createdAt: "2018-09-01T01:48:55.484Z"
+updatedAt: "2018-09-01T01:49:10.114Z"
+type: "MARKDOWN_NOTE"
+folder: "f845f61dda1e1958a234"
+title: "B 1002"
+content: '''
+  # B 1002
+  ```C++
+  #define _CRT_SECURE_NO_WARNINGS
+  #include<cstdio>
+  #include<math.h>
+  #include<string.h>
+  using namespace std;
+  
+  
+  
+  int main() 
+  {
+  	char yinshe[11][8] = { "ling","yi","er","san","si","wu","liu","qi","ba","jiu" };
+  	char n[110];
+  	scanf("%s", n);
+  	int len = strlen(n);
+  	int sum = 0;
+  	for (int i = 0; i < len; i++)
+  	{
+  		n[i] = n[i] - '0';
+  		sum += n[i];
+  	}
+  	char s[110];
+  	sprintf(s, "%d", sum);
+  	len = strlen(s);
+  	for (int i = 0; i < len; i++)
+  	{
+  		printf("%s", yinshe[s[i] - '0']);
+  		if (i < len - 1)
+  			printf(" ");
+  	}
+  }
+  ```
+'''
+tags: []
+isStarred: false
+isTrashed: false

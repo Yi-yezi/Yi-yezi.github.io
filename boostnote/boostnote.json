@@ -49,6 +49,11 @@
       "key": "f845f61dda1e1958a234",
       "color": "#30D5C8",
       "name": "PAT-入门-字符串处理"
+    },
+    {
+      "key": "c406085014b736996d4e",
+      "color": "#FF8E00",
+      "name": "PAT-入门-排序"
     }
   ],
   "version": "1.0"

@@ -1,0 +1,36 @@
+createdAt: "2018-09-01T00:57:30.239Z"
+updatedAt: "2018-09-01T00:57:45.974Z"
+type: "MARKDOWN_NOTE"
+folder: "f845f61dda1e1958a234"
+title: "B 1006"
+content: '''
+  # B 1006
+  ```C++
+  #define _CRT_SECURE_NO_WARNINGS
+  #include<cstdio>
+  #include<math.h>
+  #include<string.h>
+  using namespace std;
+  
+  
+  
+  int main() 
+  {
+  	int n;
+  	scanf("%d", &n);
+  	int bai, shi, ge;
+  	bai = n / 100;
+  	shi = n % 100 / 10;
+  	ge = n % 10;
+  	for (int i = 0; i < bai; i++)
+  		printf("B");
+  	for (int i = 0; i < shi; i++)
+  		printf("S");
+  	for (int i = 1; i <= ge; i++)
+  		printf("%d", i);
+  }
+  ```
+'''
+tags: []
+isStarred: false
+isTrashed: false
