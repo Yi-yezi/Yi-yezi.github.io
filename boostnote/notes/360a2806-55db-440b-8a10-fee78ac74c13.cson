@@ -1,0 +1,117 @@
+createdAt: "2018-09-06T08:27:34.707Z"
+updatedAt: "2018-09-06T08:27:47.089Z"
+type: "MARKDOWN_NOTE"
+folder: "31799e436538de794ce4"
+title: "A 1033"
+content: '''
+  # A 1033
+  ```C++
+  #define _CRT_SECURE_NO_WARNINGS
+  #include<cstdio>
+  #include<math.h>
+  #include<string.h>
+  #include<iostream>
+  #include<algorithm>
+  
+  struct station {
+  	double price;
+  	double distance;
+  }stations[510];
+  
+  bool cmp(station a, station b)
+  {
+  	return a.distance < b.distance;
+  }
+  
+  int main()
+  {
+  	int station_num;
+  	double capacity, distance, dis_per_gas;
+  	scanf("%lf %lf %lf %d", &capacity, &distance, &dis_per_gas, &station_num);
+  	
+  	
+  	for (int i = 0; i < station_num; i++)
+  	{
+  		scanf("%lf %lf", &stations[i].price,&stations[i].distance);
+  	}
+  	stations[station_num].price = 0.0;
+  	stations[station_num].distance = distance;
+  	std::sort(stations, stations + station_num+1, cmp);
+  	/*printf("--\\n");
+  	for (int i = 0; i <=station_num; i++)
+  	{
+  		printf("%d %lf %lf\\n", i,stations[i].price, stations[i].distance);
+  	}
+  	printf("--\\n");*/
+  	if (stations[0].distance > 0)
+  		printf("The maximum travel distance = 0.00\\n");
+  	else
+  	{
+  		int now = 0;
+  		double dis = 0;
+  		double cost = 0;
+  		double max_dis = capacity * dis_per_gas,now_price=stations[0].price;
+  		double last_dis = 0;
+  		while (now < station_num)
+  		{
+  			//getchar();
+  			bool find = false;
+  			bool exceed = true;
+  			double min_price = 10000000.0;
+  			int min_station = 0;
+  			for (int i = now + 1; i <= station_num; i++)
+  			{
+  				if ((stations[i].distance - stations[now].distance) <= max_dis)
+  				{
+  					exceed = false;
+  				}
+  				else
+  				{
+  					break;
+  				}
+  				if (stations[i].price <= now_price)
+  				{
+  					//std::cout << "选了" << i << " " << "花费" << now_price << "/" << dis_per_gas << "*" << (stations[i].distance - dis) << std::endl;
+  					cost += now_price/ dis_per_gas * (stations[i].distance - dis);
+  					now_price = stations[i].price;
+  					dis = stations[i].distance;
+  					now = i;
+  					find = true;
+  					
+  					break;
+  				}
+  				if (stations[i].price < min_price)
+  				{
+  					min_price = stations[i].price;
+  					min_station = i;
+  				}
+  			}
+  			if (exceed)
+  			{
+  				cost += now_price / dis_per_gas * max_dis;
+  				dis += max_dis;
+  				printf("The maximum travel distance = %.2lf\\n", dis);
+  				return 0;
+  			}
+  			if (!find)
+  			{
+  				//std::cout << "又选了" << min_station << " " << "花费" << now_price << "/" << dis_per_gas << "*" << max_dis-last_dis<<std::endl;
+  				cost += now_price / dis_per_gas * (max_dis - last_dis);
+  				last_dis = stations[now].distance + max_dis - stations[min_station].distance;
+  				now_price = min_price;
+  				dis = stations[now].distance+ max_dis;
+  				now = min_station;
+  			}
+  		}
+  		printf("%.2lf\\n", cost);
+  		
+  
+  	}
+  
+  
+  }
+  ```
+'''
+tags: []
+isStarred: false
+isTrashed: false

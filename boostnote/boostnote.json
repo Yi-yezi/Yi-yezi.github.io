@@ -54,6 +54,16 @@
       "key": "c406085014b736996d4e",
       "color": "#FF8E00",
       "name": "PAT-入门-排序"
+    },
+    {
+      "key": "31799e436538de794ce4",
+      "color": "#E8D252",
+      "name": "PAT-入门-散列"
+    },
+    {
+      "key": "1c076b4d30392f63f1a3",
+      "color": "#B013A4",
+      "name": "PAT-入门-二分"
     }
   ],
   "version": "1.0"
