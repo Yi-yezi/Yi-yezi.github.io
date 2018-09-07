@@ -1,0 +1,71 @@
+createdAt: "2018-09-07T10:49:06.224Z"
+updatedAt: "2018-09-07T10:49:16.910Z"
+type: "MARKDOWN_NOTE"
+folder: "44d8368ff2739c7dd853"
+title: "A 1079"
+content: '''
+  # A 1079
+  ```C++
+  #define _CRT_SECURE_NO_WARNINGS
+  #include<cstdio>
+  #include<math.h>
+  #include<string.h>
+  #include<iostream>
+  #include<vector>
+  #include<string>
+  #include<queue>
+  #include<algorithm>
+  
+  int n;
+  double p, r;
+  double ans = 0.0;
+  
+  struct Node
+  {
+  	int num;
+  	std::vector<int> child;
+  }tree[100010];
+  
+  void DFS(int root, int depth)
+  {
+  	if (tree[root].child.size() == 0) {
+  		ans += tree[root].num*pow(1 + r, depth);
+  		return;
+  	}
+  	for (int i = 0; i < tree[root].child.size(); i++)
+  	{
+  		DFS(tree[root].child[i], depth + 1);
+  	}
+  }
+  
+  
+  int main()
+  {
+  	scanf("%d %lf %lf", &n, &p, &r);
+  	r /= 100;
+  	int m;
+  	int temp;
+  	for (int i = 0; i < n; i++)
+  	{
+  		scanf("%d", &m);
+  		if (m == 0)
+  		{
+  			scanf("%d", &tree[i].num);
+  		}
+  		else
+  		{
+  			for (int j = 0; j < m; j++)
+  			{
+  				scanf("%d", &temp);
+  				tree[i].child.push_back(temp);
+  			}
+  		}
+  	}
+  	DFS(0, 0);
+  	printf("%.1f\\n", p*ans);
+  }
+  ```
+'''
+tags: []
+isStarred: false
+isTrashed: false

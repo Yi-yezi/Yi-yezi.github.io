@@ -69,6 +69,26 @@
       "key": "73c32aa06fe7e0a200c3",
       "color": "#B013A4",
       "name": "PAT-数据结构-栈"
+    },
+    {
+      "key": "45887fae6afea6b6be61",
+      "color": "#2BA5F7",
+      "name": "PAT-数据结构-队列"
+    },
+    {
+      "key": "2fd5e23bbfb9021cdbbc",
+      "color": "#2BA5F7",
+      "name": "PAT-数据结构-链表"
+    },
+    {
+      "key": "b128952beebbe3794ae4",
+      "color": "#E8D252",
+      "name": "PAT-数据结构-BFS"
+    },
+    {
+      "key": "44d8368ff2739c7dd853",
+      "color": "#FF8E00",
+      "name": "PAT-数据结构-树"
     }
   ],
   "version": "1.0"

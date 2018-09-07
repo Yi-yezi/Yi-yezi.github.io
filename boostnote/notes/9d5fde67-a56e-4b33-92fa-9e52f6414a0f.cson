@@ -1,0 +1,91 @@
+createdAt: "2018-09-07T06:51:53.960Z"
+updatedAt: "2018-09-07T06:53:15.406Z"
+type: "MARKDOWN_NOTE"
+folder: "44d8368ff2739c7dd853"
+title: "A 1020"
+content: '''
+  # A 1020
+  ```C++
+  #define _CRT_SECURE_NO_WARNINGS
+  #include<cstdio>
+  #include<math.h>
+  #include<string.h>
+  #include<iostream>
+  #include<queue>
+  #include<algorithm>
+  
+  struct node
+  {
+  	int data;
+  	node* lchild;
+  	node* rchild;
+  };
+  
+  int pre[50], in[50], post[50];
+  int n;
+  
+  node* create(int postl, int postr, int inl, int inr)
+  {
+  	if (postl > postr)
+  	{
+  		return NULL;
+  	}
+  	node* root = new node;
+  	root->data = post[postr];
+  	int i;
+  	for (i = inl; i <= inr; i++)
+  	{
+  		if (in[i] == post[postr])
+  			break;
+  	}
+  	int numLeft = i - inl;
+  	root->lchild = create(postl, postl + numLeft - 1, inl, i - 1);
+  	root->rchild = create(postl + numLeft, postr - 1, i + 1, inr);
+  	return root;
+  }
+  
+  void BFS(node* root)
+  {
+  	std::queue<node*>q;
+  	q.push(root);
+  	node* top;
+  	int num = 0;
+  	while (!q.empty())
+  	{
+  		top = q.front();
+  		q.pop();
+  		num++;
+  		printf("%d", top->data);
+  		if (num < n)
+  			printf(" ");
+  		if (top->lchild)
+  			q.push(top->lchild);
+  		if (top->rchild)
+  			q.push(top->rchild);
+  	}
+  }
+  
+  
+  
+  int main()
+  {
+  
+  	scanf("%d", &n);
+  	for (int i = 0; i < n; i++)
+  	{
+  		scanf("%d", &post[i]);
+  	}
+  	for (int i = 0; i < n; i++)
+  	{
+  		scanf("%d", &in[i]);
+  	}
+  	node * root = create(0, n - 1, 0, n - 1);
+  	BFS(root);
+  
+  
+  }
+  ```
+'''
+tags: []
+isStarred: false
+isTrashed: false

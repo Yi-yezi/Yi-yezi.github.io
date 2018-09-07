@@ -1,0 +1,123 @@
+createdAt: "2018-09-07T09:03:19.062Z"
+updatedAt: "2018-09-07T09:03:29.393Z"
+type: "MARKDOWN_NOTE"
+folder: "44d8368ff2739c7dd853"
+title: "A1102"
+content: '''
+  # A1102
+  ```C++
+  #define _CRT_SECURE_NO_WARNINGS
+  #include<cstdio>
+  #include<math.h>
+  #include<string.h>
+  #include<iostream>
+  #include<vector>
+  #include<string>
+  #include<queue>
+  #include<algorithm>
+  
+  struct node
+  {
+  	int data;
+  	int lchild;
+  	int rchild;
+  }tree[150];
+  int n;
+  
+  int notRoot[150] = { false };
+  int in_num=0,bfs_num = 0;
+  
+  
+  int findRoot()
+  {
+  	for (int i = 0; i < n; i++)
+  	{
+  		if (!notRoot[i])
+  			return i;
+  	}
+  	return 0;
+  }
+  
+  void PostInvert(int root)
+  {
+  	if (root == -1)
+  		return;
+  	PostInvert(tree[root].lchild);
+  	PostInvert(tree[root].rchild);
+  	std::swap(tree[root].lchild, tree[root].rchild);
+  }
+  
+  void inOrder(int root)
+  {
+  	if (root == -1)
+  		return;
+  	inOrder(tree[root].lchild);
+  	printf("%d", root);
+  	in_num++;
+  	if (in_num < n)
+  		printf(" ");
+  	inOrder(tree[root].rchild);
+  }
+  
+  void BFS(int root)
+  {
+  	std::queue<int> q;
+  	q.push(root);
+  	while (!q.empty())
+  	{
+  		root = q.front();
+  		printf("%d",root);
+  		bfs_num++;
+  		if (bfs_num < n)
+  			printf(" ");
+  		q.pop();
+  		if(tree[root].lchild!=-1)
+  			q.push(tree[root].lchild);
+  		if (tree[root].rchild != -1)
+  			q.push(tree[root].rchild);
+  	}
+  }
+  
+  int main()
+  {
+  
+  	scanf("%d", &n);
+  	char l, r;
+  	for (int i = 0; i < n; i++)
+  	{
+  		scanf("%*c%c %c", &l, &r);
+  		if (l != '-')
+  		{
+  			tree[i].lchild = l - '0';
+  			notRoot[tree[i].lchild] = true;
+  		}
+  		else
+  		{
+  			tree[i].lchild = -1;
+  		}
+  			
+  		if (r != '-')
+  		{
+  			tree[i].rchild = r - '0';
+  			notRoot[tree[i].rchild] = true;
+  		}
+  			
+  		else
+  		{
+  			tree[i].rchild = -1;
+  		}
+  			
+  	}
+  
+  	int root = findRoot();
+  	PostInvert(root);
+  	BFS(root);
+  	printf("\\n");
+  	inOrder(root);
+  	printf("\\n");
+  }
+  ```
+'''
+tags: []
+isStarred: false
+isTrashed: false

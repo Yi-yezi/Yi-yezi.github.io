@@ -1,0 +1,91 @@
+createdAt: "2018-09-07T08:16:01.847Z"
+updatedAt: "2018-09-07T08:16:16.336Z"
+type: "MARKDOWN_NOTE"
+folder: "44d8368ff2739c7dd853"
+title: "A 1086"
+content: '''
+  # A 1086
+  ```C++
+  #define _CRT_SECURE_NO_WARNINGS
+  #include<cstdio>
+  #include<math.h>
+  #include<string.h>
+  #include<iostream>
+  #include<vector>
+  #include<string>
+  #include<stack>
+  #include<algorithm>
+  
+  struct node
+  {
+  	int data;
+  	node* lchild;
+  	node* rchild;
+  };
+  std::vector<int> pre, in, post;
+  int num = 0;
+  int n;
+  
+  node* create(int prel,int prer,int inl,int inr)
+  {
+  	if (prel > prer)
+  		return NULL;
+  	node* root = new node;
+  	root->data = pre[prel];
+  	int i;
+  	for (i = inl; i < inr; i++)
+  	{
+  		if (in[i] == pre[prel])
+  			break;
+  	}
+  	int leftNum = i - inl;
+  	root->lchild = create(prel + 1, prel + leftNum, inl, inl + leftNum-1);
+  	root->rchild = create(prel + leftNum + 1, prer, inl + leftNum + 1, inr);
+  	return root;
+  }
+  
+  void postOrder(node* root)
+  {
+  	if (root == NULL)
+  		return;
+  	postOrder(root->lchild);
+  	postOrder(root->rchild);
+  	printf("%d", root->data);
+  	num++;
+  	if (num < n)
+  		printf(" ");
+  }
+  
+  
+  int main()
+  {
+  
+  	scanf("%d", &n);
+  	std::stack<int> s;
+  	std::string operation;
+  	int num;
+  	for (int i = 0; i < 2 * n; i++)
+  	{
+  		std::cin >> operation;
+  		if (operation == "Push")
+  		{
+  			std::cin >> num;
+  			pre.push_back(num);
+  			s.push(num);
+  		}
+  		else
+  		{
+  			num = s.top();
+  			s.pop();
+  			in.push_back(num);
+  		}
+  	}
+  	node* root = create(0, n - 1, 0, n - 1);
+  	postOrder(root);
+  
+  }
+  ```
+'''
+tags: []
+isStarred: false
+isTrashed: false

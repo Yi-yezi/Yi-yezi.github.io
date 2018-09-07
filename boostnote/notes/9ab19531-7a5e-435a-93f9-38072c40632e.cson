@@ -1,0 +1,88 @@
+createdAt: "2018-09-07T01:46:01.166Z"
+updatedAt: "2018-09-07T01:46:12.979Z"
+type: "MARKDOWN_NOTE"
+folder: "45887fae6afea6b6be61"
+title: "A 1056"
+content: '''
+  # A 1056
+  ```C++
+  #define _CRT_SECURE_NO_WARNINGS
+  #include<cstdio>
+  #include<math.h>
+  #include<string.h>
+  #include<iostream>
+  #include<queue>
+  #include<algorithm>
+  
+  struct mice {
+  	int weight;
+  	int rank;
+  }mices[1010];
+  
+  int main()
+  {
+  	int np, ng;
+  	scanf("%d %d", &np, &ng);
+  
+  	for (int i = 0; i < np; i++)
+  	{
+  		scanf("%d", &mices[i].weight);
+  	}
+  
+  	int seq[1010];
+  	for (int i = 0; i < np; i++)
+  	{
+  		scanf("%d", &seq[i]);
+  	}
+  
+  	std::queue<int> mouse_queue;
+  
+  	for (int i = 0; i < np; i++)
+  	{
+  		mouse_queue.push(seq[i]);
+  	}
+  
+  	int weightest,temp;
+  	int num = np;
+  	int group;
+  	while (mouse_queue.size()>1)
+  	{
+  		group = num % ng == 0 ? num / ng : num / ng + 1;
+  		for (int j = 0; j < group; j++)
+  		{
+  			weightest = mouse_queue.front();
+  			for (int i = 0; i < ng; i++)
+  			{
+  				if (j*ng+i<num)
+  				{
+  					temp = mouse_queue.front();
+  					mouse_queue.pop();
+  					if (mices[temp].weight > mices[weightest].weight)
+  					{
+  						weightest = temp;
+  					}
+  					mices[temp].rank = group + 1;
+  				}
+  				else
+  					break;
+  			}
+  			mouse_queue.push(weightest);
+  		}
+  		num = group;
+  	}
+  	mices[mouse_queue.front()].rank = 1;
+  
+  	for (int i = 0; i < np; i++)
+  	{
+  		printf("%d", mices[i].rank);
+  		if (i < np - 1)
+  			printf(" ");
+  	}
+  
+  
+  }
+  ```
+'''
+tags: []
+isStarred: false
+isTrashed: false
