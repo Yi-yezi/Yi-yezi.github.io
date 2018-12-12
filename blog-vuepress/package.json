@@ -12,5 +12,8 @@
   "license": "ISC",
   "devDependencies": {
     "vuepress": "^0.14.8"
+  },
+  "dependencies": {
+    "element-ui": "^2.4.11"
   }
 }
