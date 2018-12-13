@@ -28,13 +28,14 @@ module.exports = {
                     'computerNetwork/page2',
                   ]
                 },
-                /*{
+                {
                   title: '编译原理',
                   collapsable: true,
                   children: [
+                    `complier/page1`,
                   ]
                 },
-                {
+                /*{
                   title: '杂记',
                   collapsable: true,
                   children: [
