@@ -39,7 +39,8 @@ module.exports = {
                   title: '研研研计划',
                   collapsable: true,
                   children: [
-                    `researcher/page1`
+                    `researcher/page1`,
+                    `researcher/page2`
                   ]
                 }
               ]
