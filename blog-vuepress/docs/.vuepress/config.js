@@ -35,12 +35,13 @@ module.exports = {
                     `complier/page1`,
                   ]
                 },
-                /*{
-                  title: '杂记',
+                {
+                  title: '研研研计划',
                   collapsable: true,
                   children: [
+                    `researcher/page1`
                   ]
-                }*/
+                }
               ]
           }
     }
