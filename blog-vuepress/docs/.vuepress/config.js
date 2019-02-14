@@ -12,14 +12,14 @@ module.exports = {
         ],
         sidebar: {
             '/docs/': [
-                {
+                /*{
                   title: 'vue&vuepress',
                   collapsable: true,
                   children: [
                     'vue/page1',
                     'vue/page2',
                   ]
-                },
+                },*/
                 {
                   title: '计算机网络',
                   collapsable: true,
@@ -36,11 +36,10 @@ module.exports = {
                   ]
                 },
                 {
-                  title: '研研研计划',
+                  title: 'MITK',
                   collapsable: true,
                   children: [
-                    `researcher/page1`,
-                    `researcher/page2`
+                    `mitk/page1`,
                   ]
                 }
               ]
