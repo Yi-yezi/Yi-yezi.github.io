@@ -40,6 +40,7 @@ module.exports = {
                   collapsable: true,
                   children: [
                     `mitk/page1`,
+                    `mitk/page2`,
                   ]
                 }
               ]
