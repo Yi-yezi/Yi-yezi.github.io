@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "@vuepress/plugin-medium-zoom": "^1.0.0-beta.2",
+    "vuepress": "^1.0.0-beta.2"
+  },
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  }
+}
