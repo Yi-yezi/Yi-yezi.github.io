@@ -33,16 +33,16 @@ llvm作为后端与前端clang配合可以快速方便地构造编译器，而ll
 <img src="../../assets/img/llvm_2.png" style="zoom: 67%;"><br>
 
 ## 编译流程
-#### 1.首先调整目录结构
+### 1.首先调整目录结构
 在修改好文件夹名称后，将对应的文件夹放于llvm目录下，放置结构如图：
 
 <img src="../../assets/img/llvm_3.png" style="zoom: 67%;"><br>
 
-#### 2.创建build与install文件夹
+### 2.创建build与install文件夹
 如图，build目录用于build文件放置，install目录用于最后install文件放置
 <img src="../../assets/img/llvm_4.png" style="zoom: 67%;"><br>
 
-#### 3.进入build目录使用cmake生成build文件
+### 3.进入build目录使用cmake生成build文件
 build前先检查是否已安装`libffi-dev`,`libtinfo-dev`,`gcc`,`g++`
 
 注意要在build目录下进行，根据自己实际情况对cmake参数进行修改
@@ -57,13 +57,13 @@ cmake -G Ninja ../llvm-source/llvm \ # 设定build类型用于Ninja，以及源�
   -Wno-dev
 ```
 
-#### 4.build与install
+### 4.build与install
 ```bash
 ninja # 开始build
 ninja install # build完成后，install
 ```
 
-#### 5. 设置相关环境变量
+### 5. 设置相关环境变量
 修改`/etc/profile`文件，末尾一下路径，根据自己实际安装目录进行修改
 ```bash
 export PATH=$PATH:/opt/cmake-3.16.2-Linux-x86_64/bin
@@ -72,10 +72,10 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/llvm-install/lib # 动态链接库�
 export C_INCLUDE_PATH=$C_INCLUDE_PATH:/opt/llvm-install/include # clang使用gcc的include路径
 ```
 
-#### 6.检查配置
+### 6.检查配置
 测试clang，gcc,g++命令，测试编译使用llvm的文件
 
-#### 7.总结与建议
+### 7.总结与建议
 每次面对新环境、新软件的配置，真是很烦很费时，特别是需要cmake跨平台编译之类的，llvm的安装花费了我很多时间，开始没用ninja，直接使用make，在双系统、虚拟机、wsl,8G的笔记本，16G的台式都试过，无一成功，好不容易发现ninja可以，编译成功后由于一些环境变量设置错误，或是测试使用的文件版本不对应等问题让我误以为编译失败又浪费了许多时间，前前后后大概花了一周时间（哭了
 
 不得不说，有的时候直接用docker开环境是真香，呜呜呜，搜索pull运行一气呵成，现成的配置，现成的工具，各种版本都有，发明docker的人~谢谢你，泰罗！
