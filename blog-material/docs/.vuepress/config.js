@@ -47,6 +47,14 @@ module.exports = {
                     `mitk/page3`,
                     `mitk/page4`,
                   ]
+            },
+            {
+              title: '饥荒',
+              collapsable: true,
+              sidebarDepth: 2,
+              children: [
+                `DoNotStarve/page1`,
+              ]
                 }
               ]
           }
